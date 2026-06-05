@@ -1,0 +1,15 @@
+# Large data files
+tokens.npy
+checkpoints/
+*.pth
+*.pt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# OS
+.DS_Store
+Thumbs.db
