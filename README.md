@@ -122,7 +122,7 @@ python prepare_data.py
 
 This extracts FEN strings from the puzzle CSV and tokenizes them into 72-token sequences, saving the result to `tokens.npy`.
 
-### 6. Train the model
+### 6. Train and save the model
 
 ```bash
 python train.py
