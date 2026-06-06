@@ -92,7 +92,15 @@ git clone https://github.com/Ashishkabaab/ChessDiffusion.git
 cd ChessDiffusion
 ```
 
-### 2. Install dependencies
+### 2. Clone the d3pm dependency
+
+```bash
+git clone https://github.com/cloneofsimo/d3pm.git
+```
+
+This provides `d3pm_runner.py` and `dit.py` which are required to run the model. Excluded from this repo since it is a seperate project. 
+
+### 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -100,7 +108,7 @@ pip install -r requirements.txt
 
 > Requires Python 3.8+ and a CUDA-capable GPU for training. The model was trained on an NVIDIA B200 with CUDA 12.8 and PyTorch 2.12.
 
-### 3. Download the Lichess puzzle database
+### 4. Download the Lichess puzzle database
 
 ```bash
 wget https://database.lichess.org/lichess_db_puzzle.csv.zst
@@ -108,13 +116,13 @@ wget https://database.lichess.org/lichess_db_puzzle.csv.zst
 
 This file is approximately 1.5GB compressed.
 
-### 4. Decompress the dataset
+### 5. Decompress the dataset
 
 ```bash
 python decompress.py
 ```
 
-### 5. Prepare training data
+### 6. Prepare training data
 
 ```bash
 python prepare_data.py
@@ -122,7 +130,7 @@ python prepare_data.py
 
 This extracts FEN strings from the puzzle CSV and tokenizes them into 72-token sequences, saving the result to `tokens.npy`.
 
-### 6. Train and save the model
+### 7. Train and save the model
 
 ```bash
 python train.py
@@ -130,7 +138,7 @@ python train.py
 
 Training runs for 10 epochs over 500,000 FEN sequences. Checkpoints are saved to `checkpoints/`. On an NVIDIA B200, training takes approximately 25 minutes.
 
-### 7. Evaluate
+### 8. Evaluate
 
 ```bash
 python evaluate.py
