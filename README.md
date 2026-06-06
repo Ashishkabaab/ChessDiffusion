@@ -98,7 +98,7 @@ cd ChessDiffusion
 git clone https://github.com/cloneofsimo/d3pm.git
 ```
 
-This provides `d3pm_runner.py` and `dit.py` which are required to run the model. Excluded from this repo since it is a seperate project. 
+This provides `d3pm_runner.py` and `dit.py` which are required to run the model. Excluded from this repo since it is a separate project. 
 
 ### 3. Install dependencies
 
